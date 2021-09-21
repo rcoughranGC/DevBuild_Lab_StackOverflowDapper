@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "AddQuestion";
+}
+
+<h1>Add a Question</h1>
+
+<form action="/Detail" method="post">
+    Username: <input type="text" name="username" />
+    <br />
+    Question Title:<br />
+    <input type="text" name="title" /><br />
+    Details:<br />
+    <textarea rows="10" cols="80" name="detail"></textarea>
+    <br />
+    Add a tag: <input type="text" name="tags" />
+</form>  

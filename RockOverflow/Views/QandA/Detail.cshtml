@@ -1,0 +1,22 @@
+﻿@model QuestionAnswers
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<h1>Question Detail</h1>
+<div>
+    Title: @Model.ques.title <br />
+    User: @Model.ques.username <br />
+    Detail: @Model.ques.detail <br /><br /><br />
+    Answers: 
+    @foreach (var answer in Model.quesAnswers)
+    {
+    <div>
+        <br />
+        User: @answer.username <br />
+        Answer: @answer.detail <br />
+        Upvotes: @answer.upvotes <br />
+    </div>
+
+    }
+</div>
