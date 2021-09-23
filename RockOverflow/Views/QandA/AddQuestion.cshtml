@@ -5,13 +5,26 @@
 
 <h1>Add a Question</h1>
 
-<form action="/Detail" method="post">
-    Username: <input type="text" name="username" />
-    <br />
+<form method="post" asp-controller="QandA" asp-action="InsertQuestion" >
+    Username:
+    <div>
+        @if (ViewData["user"] == null)
+        {
+            <input type="text" name="username" />
+        }
+        @if (ViewData["user"] != null)
+        {
+            <input type="text" name="username" Value=@ViewData["user"]>
+
+        }
+
+    </div>
+    
     Question Title:<br />
     <input type="text" name="title" /><br />
     Details:<br />
     <textarea rows="10" cols="80" name="detail"></textarea>
     <br />
     Add a tag: <input type="text" name="tags" />
+    <input type="submit" />
 </form>  

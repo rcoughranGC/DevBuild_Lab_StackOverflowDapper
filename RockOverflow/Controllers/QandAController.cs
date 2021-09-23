@@ -18,14 +18,29 @@ namespace RockOverflow.Controllers
             List<Questions> results = DAL.Search(query);
             return View(results);
         }
-
+        
         public IActionResult AddQuestion()
         {
-
+            ViewData["user"] = DAL.CurrentUser;
             return View();
+        }
+        public IActionResult InsertQuestion(Questions newQ)
+        {
+            newQ.posted = DateTime.Now;
+            DAL.InsertQuestion(newQ);
+            return Redirect($"/QandA/Detail?questId={newQ.id}");
+            //return Redirect($"/");
+        }
+
+        public IActionResult InsertAnswer(Answers newAns)
+        {
+            newAns.posted = DateTime.Now;
+            DAL.InsertAnswer(newAns);
+            return Redirect($"/QandA/Detail?questId={newAns.questionId}");
         }
         public IActionResult Detail(int questId)
         {
+            ViewData["user"] = DAL.CurrentUser;
             QuestionAnswers questionWithAnswers = DAL.GetAnswersToQuestion(questId);
             return View(questionWithAnswers);
         }

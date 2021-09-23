@@ -2,6 +2,7 @@
     ViewData["Title"] = "Rock Overflow";
 }
 
+
 <div class="text-center">
     <h1 class="display-4">Welcome to Rock Overflow</h1>
     
@@ -9,3 +10,11 @@
 <form class="text-center" method="get" action="/QandA/search">
     Search: <input type="text" name="query" /><input type="submit" value="Search" />
 </form>
+<br />
+
+<div>
+    <a asp-action="AddQuestion" asp-controller="QandA" class="centerbutton btn btn-info">Can't Find your Question? <br /> Post Your Own!</a>
+</div>
+    
+
+

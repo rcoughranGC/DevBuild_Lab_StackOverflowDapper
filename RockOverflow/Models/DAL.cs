@@ -60,11 +60,16 @@ namespace RockOverflow.Models
         }
 
         // Add a question
-        public static void InsertQuestion(Questions ques)
+        public static void InsertQuestion(Questions newQ)
         {
-            DB.Insert(ques);
-        }
+            //newQ.username = DAL.CurrentUser;
+            DB.Insert(newQ);
 
+        }
+        public static void InsertAnswer(Answers newAns)
+        {
+            DB.Insert(newAns);
+        }
 
 
     }
