@@ -70,6 +70,15 @@ namespace RockOverflow.Models
         {
             DB.Insert(newAns);
         }
+        public static Answers GetAnswerById(int ansId)
+        {
+            return DB.Get<Answers>(ansId);
+
+        }
+        public static void UpdateAnswer(Answers ans)
+        {
+            DB.Update(ans);
+        }
 
 
     }

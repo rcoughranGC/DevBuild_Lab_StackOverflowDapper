@@ -410,3 +410,4 @@ C:\Dev\RockOverflow\RockOverflow\obj\Debug\netcoreapp3.1\Razor\Views\QandA\Detai
 C:\Dev\RockOverflow\RockOverflow\obj\Debug\netcoreapp3.1\Razor\Views\QandA\AddQuestion.cshtml.g.cs
 C:\Dev\RockOverflow\RockOverflow\obj\Debug\netcoreapp3.1\Razor\Views\QandA\Search.cshtml.g.cs
 C:\Dev\RockOverflow\RockOverflow\obj\Debug\netcoreapp3.1\RockOverflow.csprojAssemblyReference.cache
+C:\Dev\RockOverflow\RockOverflow\obj\Debug\netcoreapp3.1\Razor\Views\QandA\EditAnswer.cshtml.g.cs

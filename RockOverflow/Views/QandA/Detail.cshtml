@@ -11,12 +11,20 @@
     Answers:
     @foreach (var answer in Model.quesAnswers)
     {
-        <div>
-            <br />
+    <div>
+        <br />
             User: @answer.username <br />
             Answer: @answer.detail <br />
             Upvotes: @answer.upvotes <br />
-        </div>
+            @if (answer.username == DAL.CurrentUser)
+            {
+                
+                <a asp-action="EditAnswer"
+                   asp-controller="QandA" 
+                   asp-route-ansId="@answer.id" class="btn btn-info">Edit</a>
+
+            } 
+    </div>
 
     }
 </div>

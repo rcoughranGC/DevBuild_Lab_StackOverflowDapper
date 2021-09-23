@@ -38,6 +38,18 @@ namespace RockOverflow.Controllers
             DAL.InsertAnswer(newAns);
             return Redirect($"/QandA/Detail?questId={newAns.questionId}");
         }
+        public IActionResult EditAnswer(int ansId)
+        {
+            Answers editAns = DAL.GetAnswerById(ansId);
+            return View(editAns);
+        }
+        public IActionResult UpdateAnswer(Answers ans)
+        {
+            
+            DAL.UpdateAnswer(ans);
+            return Redirect($"/QandA/Detail?questId={ans.questionId}");
+            //Detail(ans.questionId);
+        }
         public IActionResult Detail(int questId)
         {
             ViewData["user"] = DAL.CurrentUser;
