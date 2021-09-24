@@ -1,0 +1,26 @@
+﻿@model Answers 
+@{
+    ViewData["Title"] = "EditAnswer";
+}
+
+<h1>Edit Your Answer</h1>
+
+
+
+@* I can't get this to pass the answer back... *@
+@* Ok i got it to work by deleting the asp-route part *@
+
+<form method="post" asp-controller="QandA" asp-action="UpdateAnswer">
+
+
+    Question ID: @Model.id
+    Details: @Model.detail
+    <br />
+    <textarea rows="10" cols="80" name="detail" value="@Model.detail"></textarea>
+    <input type="hidden" name="id" value="@Model.id" />
+    <input type="hidden" name="username" value="@Model.username" />
+    <input type="hidden" name="questionId" value="@Model.questionId" />
+    <input type="hidden" name="upvotes" value="@Model.upvotes" />
+    <br />
+    <input type="submit" />
+</form>  

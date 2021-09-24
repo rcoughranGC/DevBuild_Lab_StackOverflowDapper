@@ -45,7 +45,7 @@ namespace RockOverflow.Controllers
         }
         public IActionResult UpdateAnswer(Answers ans)
         {
-            
+            ans.posted = DateTime.Now;
             DAL.UpdateAnswer(ans);
             return Redirect($"/QandA/Detail?questId={ans.questionId}");
             //Detail(ans.questionId);
